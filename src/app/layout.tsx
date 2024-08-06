@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ResponsiveAppBar from "../appbar/page";
+import ResponsiveAppBar from "./appbar/page";
+import Header from '../components/header/page'
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +25,10 @@ export default function RootLayout({
       </head>
       
       <body className={inter.className}>
-      <ResponsiveAppBar/>
+        <ResponsiveAppBar/>
+     
+      <Header/>
+      
         {children}
         
       </body>
